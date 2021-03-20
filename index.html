@@ -15,11 +15,16 @@
                 <li><a href="#typography">Typography</a></li>
                 <li><a href="#colors">Colors</a></li>
                 <li><a href="#figures">Figures</a></li>
-                <li><a href="#cards">Cards</a></li>
-                <li><a href="#viewwindow">View Window</a></li>
+                <li><a href="#window">View Window</a></li>
+                <li><a href="#buttons">Buttons</a></li>
+                <li><a href="#hotdog">Hotdog</a></li>
+                <li><a href="#select">Select</a></li>
+                <li><a href="#checkbox">Checkbox</a></li>
+                <li><a href="#table">Table</a></li>
                 <li><a href="#navigation">Navigation</a></li>
-                <li><a href="#gridsystem">Grid System</a></li>
-                <li><a href="#flexsystem">Flex System</a></li>
+                <li><a href="#input">Inputs</a></li>
+                <li><a href="#grid">Grid System</a></li>
+                <li><a href="#flex">Flex System</a></li>
             </ul>
         </div>
     </div>
@@ -51,12 +56,152 @@
     
     <div class="sec">
         <h2 id="figures" class="typo">FIGURES</h2>
-        <div class="fig">
-            <figure class="figure">
-                <img src="https://via.placeholder.com/300x250?text=product" alt="">
-            <figcaption>Product<br>$0.00</figcaption>
-            </figure>
+        <div class="figures">
+            <div class="fig">
+                <figure class="figure">
+                    <img src="https://via.placeholder.com/300x250?text=product" alt="">
+                <figcaption>Product<br>$0.00</figcaption>
+                </figure>
+            </div>
+            <div class="fig">
+                <figure class="figure">
+                    <img src="https://via.placeholder.com/300x250?text=product" alt="">
+                <figcaption>Product<br>$0.00</figcaption>
+                </figure>
+            </div>
+            <div class="fig">
+                <figure class="figure">
+                    <img src="https://via.placeholder.com/300x250?text=product" alt="">
+                <figcaption>Product<br>$0.00</figcaption>
+                </figure>
+            </div>
         </div>
     </div>
+    
+    <div class="sec">
+        <h2 class="typo" id="window">VIEW WINDOW</h2>
+        <div class="view-window" style="background-image: url(https://i.gadgets360cdn.com/large/ps5_w-disc_1591912765971.jpeg?downsize=950:*&output-quality=80)"></div>
+    </div>
+    
+    <div class="sec">
+        <h2 class="typo" id="buttons">BUTTONS</h2>
+        <div class="button">
+            <button class="defbutton2">Default Button</button> 
+            <button class="defbutton">Default Button 2</button> 
+            <button class="defbutton3">Default Button 3</button> 
+            <button class="defbutton4">Default Button 4</button> 
+        </div>
+    </div>
+    
+    <div class="sec">
+        <h2 class="typo" id="hotdog">HOTDOG</h2>
+        <div class="search">
+            <form>
+                <input class="hotdog" type="search" placeholder="Search">
+            </form>
+        </div>
+    </div>
+    
+    <div class="sec">
+        <h2 class="typo" id="select">SELECT</h2>
+        <div class="select">
+            <select class="sel">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+    </div>
+    
+    <div class="sec">
+        <h2 class="typo" id="checkbox">CHECKBOX</h2>
+        <div class="check">
+            <label class="checks"><input type="checkbox" class="checkbox"></label>
+        </div>
+    </div>
+    
+    <script>
+    const makeTable = (classes='') => {
+	const head = ['ID','Office','Name','Email','Phone'];
+	const body = [
+		['522',"Hamilton Cline",'hcline@academyart.edu','555-2424'],
+		['512',"Fred McHale",'fmchale@academyart.edu','555-2424'],
+		['522',"Michael Catanzaro",'mcatanzaro@academyart.edu','555-2424'],
+		['514',"Andrea Pimental",'apimentel@academyart.edu','555-2424'],
+		['516',"DC Scarpelli",'dscarpelli@academyart.edu','555-2424'],
+	];
+
+	document.write(`
+		<table class="${classes}">
+			<thead><tr>${head.reduce((r,o)=>r+`<th>${o}</th>`,'')}</tr></thead>
+			<tbody>${body.reduce((r,o,i)=>r+
+				`<tr>${
+					[i+1,...o].reduce((r,o)=>r+`<td>${o}</td>`,'')
+				}</tr>`,'')
+			}</tbody>
+		</table>	
+		`);
+	}
+</script>
+    
+    <div class="sec">
+        <h2 class="typo" id="table">TABLE</h2>
+        <div class="tablee">
+            <script>makeTable("table")</script>
+        </div>   
+    
+    </div>
+    
+    <div class="sec">
+        <h2 class="typo" id="navigation">NAVIGATION</h2>
+        <div class="nav">
+            <nav class="navi">
+                <ul class="navii">
+                    <li><a href="#" class="nav1">Home</a></li>
+                    <li><a href="#" class="nav1">About</a></li>
+                    <li><a href="#" class="nav1">Store</a></li>
+                    <li><a href="#" class="nav1">Contact Us</a></li>
+                </ul>
+            </nav> 
+        </div>
+        <div class="crumb">
+             <ul class="crumbss">
+                    <li class="crum"><a href="#" class="crumbs">Crumbs</a></li>
+                    <li class="crum"><a href="#" class="crumbs">Navigation</a></li>
+                    <li class="crum"><a href="#" class="crumbs">Product</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="sec">
+        <h2 class="typo" id="input">INPUTS</h2>
+        <div class="form">
+            <form>
+                <input type="text" class="definput" placeholder="default input">
+                <input type="text" class="invalidinput" placeholder="invalid input">
+                <input type="text" class="disabledinput" placeholder="disabled input">
+            </form>
+        </div>
+    </div>
+    
+    <div class="sec">
+        <h2 class="typo" id="grid">GRID SYSTEM</h2>
+        <div class="nav">
+            
+        </div>
+    </div>
+    
+    <div class="sec">
+        <h2 class="typo" id="flex">FLEX SYSTEM</h2>
+        <div class="nav">
+            
+        </div>
+    </div>
+    
+    <footer>
+        <p>©Akshat Sonar 2021</p>
+    </footer>
+    
 </body>
 </html>
